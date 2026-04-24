@@ -1,0 +1,38 @@
+# CampusFlow — AI-Enabled Online College Program Management System
+
+**CSC322 Project — Phase 2 Design Report**  
+**Team:** Kapil Tamang, Ibsan Hossain, Tausif Hassan, Arif  
+**Date:** April 20, 2026  
+**Version:** 2.0
+
+## Overview
+CampusFlow is an AI-enabled web platform that centralizes 
+college program management. It supports four user roles — 
+Visitor, Student, Instructor, and Registrar — and includes 
+course registration, grading, reviews, complaints, graduation, 
+and an AI chatbot assistant.
+
+## Tech Stack
+- Frontend: Streamlit / HTML prototype
+- Backend: Python
+- Database: Centralized (Firebase / SQL)
+- AI: Local Knowledge Base + External LLM fallback
+
+## Core Services
+- AuthService
+- ApplicationService
+- CourseService
+- EnrollmentService
+- GradeService
+- ReviewService
+- ComplaintService
+- GraduationService
+- ChatService
+- SessionService
+
+## Running the Prototype
+Open `src/index.html` in any browser to view the GUI prototype.
+
+## Documents
+- Phase 1 SRS: `Phase1.pdf`
+- Phase 2 Design Report: `Phase2.pdf`
