@@ -508,3 +508,14 @@ button:disabled, .btn:disabled { opacity: .55; cursor: not-allowed; }
 .justification textarea { width: 100%; min-height: 90px; margin: 10px 0; border: 1px solid #d3b980; border-radius: 12px; padding: 12px; background: white; }
 .hero.single { grid-template-columns: 1fr; place-items: center; padding: 40px; }
 @media (max-width: 1200px) { .hero { grid-template-columns: 0.85fr 1.15fr; } .brand { padding: 36px; gap: 140px; } .logo-text { font-size: 48px; } .tagline { font-size: 40px; } }
+
+/* Inline row-level table actions */
+.row-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+.btn.sm { padding: 7px 12px; font-size: 13px; font-weight: 700; border-radius: 9px; }
+.table td .pill { white-space: nowrap; }
+
+/* AI summary modal */
+.modal-backdrop { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.55); display: flex; align-items: center; justify-content: center; z-index: 1000; padding: 24px; }
+.modal { background: #fffaf2; border: 1px solid #eadcc5; border-radius: 16px; padding: 24px 26px; max-width: 640px; width: 100%; max-height: 85vh; overflow: auto; box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35); }
+.modal h3 { margin: 0 0 14px; display: flex; align-items: center; gap: 8px; color: #162033; }
+.modal-foot { display: flex; justify-content: flex-end; gap: 8px; margin-top: 18px; }

@@ -29,7 +29,23 @@ export async function api(path, options = {}) {
   }
 
   if (!response.ok) {
-    throw new Error(data?.detail || data?.message || `Request failed: ${response.status}`);
+    throw new Error(formatError(data) || `Request failed: ${response.status}`);
   }
   return data;
+}
+
+function formatError(data) {
+  if (!data) return null;
+  const d = data.detail ?? data.message;
+  if (typeof d === 'string') return d;
+  if (Array.isArray(d)) {
+    return d.map(item => {
+      if (typeof item === 'string') return item;
+      const field = Array.isArray(item?.loc) ? item.loc.filter(p => p !== 'body').join('.') : '';
+      const msg = item?.msg || 'invalid value';
+      return field ? `${field}: ${msg}` : msg;
+    }).join('; ');
+  }
+  if (d && typeof d === 'object') return d.msg || JSON.stringify(d);
+  return null;
 }
